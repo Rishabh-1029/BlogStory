@@ -20,9 +20,8 @@
 ## Tech Stack
 
 - **Framework:** FastAPI
-- **Database:** SQLite / PostgreSQL / MySQL
+- **Database:** SQLite
 - **ORM:** SQLAlchemy
 - **Authentication:** JWT (JSON Web Tokens)
 - **Validation:** Pydantic
 - **Server:** Uvicorn
-- **Dev Tools:** Git, GitLens, VS Code
