@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from . import models
 from .database import engine
-from .routers import blog, user
+from .routers import blog, user, authentication
 
 app = FastAPI(title = 'BlogStory')
 
@@ -14,6 +14,9 @@ def readroots():
 
 # Database
 models.Base.metadata.create_all(engine)
+
+# Authentication
+app.include_router(authentication.router)
 
 # User data route
 app.include_router(user.router)

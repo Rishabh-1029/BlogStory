@@ -16,8 +16,9 @@ def get_by_id(id: int,db:Session):
     return blog
 
 
-def create_blog(request: schemas.Blog, db:Session):   
-    new_blog = models.Blog(title=request.title, body=request.body, user_id=25)
+def create_blog(request: schemas.Blog, db:Session):
+    user_id = 25
+    new_blog = models.Blog(title=request.title, body=request.body, user_id=user_id)
     
     db.add(new_blog)
     db.commit()
