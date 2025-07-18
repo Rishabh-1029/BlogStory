@@ -16,8 +16,10 @@ def get_by_id(id: int,db:Session):
     return blog
 
 
-def create_blog(request: schemas.Blog, db:Session):
-    user_id = 25
+def create_blog(request: schemas.Blog, db:Session, current_user: schemas.User):
+    user_email = db.query(models.User).filter(models.User.email == current_user.email).first()
+    user_id = user_email.id
+    
     new_blog = models.Blog(title=request.title, body=request.body, user_id=user_id)
     
     db.add(new_blog)

@@ -26,7 +26,7 @@ def show(id, db:Session = Depends(get_db), current_user: schemas.User = Depends(
 # Create Blog
 @router.post('/create_Blog', status_code = status.HTTP_201_CREATED)
 def create(request: schemas.Blog, db : Session = Depends(get_db), current_user: schemas.User = Depends(oaut2.get_current_user)):
-    return blog.create_blog(request, db)
+    return blog.create_blog(request, db, current_user)
 
 
 # Update Blog
