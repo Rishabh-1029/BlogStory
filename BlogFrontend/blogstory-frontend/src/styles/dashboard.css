@@ -1,0 +1,135 @@
+/* ===== Modern Dashboard Layout ===== */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  color: #111827;
+  min-height: 100vh;
+  transition: background 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+/* Title */
+.dashboard-container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  transition: transform 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 3rem;
+  color: #5a5dff;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.dashboard-container h1:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px 10px rgba(90, 93, 255, 0.6);
+  cursor: pointer;
+}
+
+/* ===== New Blog Section ===== */
+.new-blog-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.new-blog-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.new-blog-form input,
+.new-blog-form textarea {
+  width: 96%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-blog-form input:focus,
+.new-blog-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+.new-blog-form button {
+  margin-top: 0.5rem;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.new-blog-form button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* ===== Blogs Grid ===== */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* ===== Blog Card ===== */
+.blog-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  border: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.blog-card .creator {
+  font-size: 0.9rem;
+  color: #6366f1;
+  font-weight: 500;
+}
+
+/* ===== States ===== */
+.error {
+  color: #ef4444;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+}
