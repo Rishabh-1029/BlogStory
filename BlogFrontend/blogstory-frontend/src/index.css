@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #ccccff 0%, #c8c9ff 100%);
+
+  min-height: 100vh;
+}
